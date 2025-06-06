@@ -1,0 +1,62 @@
+<nav
+  class="bg-white border-b border-gray-200 px-4 py-3 dark:bg-gray-900 dark:border-gray-700"
+>
+  <div class="container mx-auto flex flex-wrap items-center justify-between">
+    <a href="/" class="text-xl font-semibold text-gray-900 dark:text-white">
+      MyApp
+    </a>
+    <button
+      data-collapse-toggle="navbar-menu"
+      type="button"
+      class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"
+      (click)="isOpen = !isOpen"
+      aria-controls="navbar-menu"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Open main menu</span>
+      <svg
+        class="w-6 h-6"
+        aria-hidden="true"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M3 5h14a1 1 0 010 2H3a1 1 0 110-2zm0 4h14a1 1 0 010 2H3a1 1 0 110-2zm0 4h14a1 1 0 010 2H3a1 1 0 110-2z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+    </button>
+
+    <div
+
+      id="navbar-menu"
+    >
+      <ul
+        class="flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium"
+      >
+        <li>
+          <a
+            href="#"
+            class="block py-2 pl-3 pr-4 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 pl-3 pr-4 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 pl-3 pr-4 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

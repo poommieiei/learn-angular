@@ -1,0 +1,51 @@
+<ng-container *ngIf="product">
+  <div
+    class="max-w-xl w-full mx-auto flex flex-col sm:flex-row items-start gap-4 border rounded-lg p-4 shadow-sm bg-white hover:shadow-md transition"
+  >
+    <div
+      class="w-full sm:w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100"
+    >
+      <img
+        [src]="product.images[0]"
+        [alt]="product.title"
+        class="w-full h-full object-cover object-center"
+      />
+    </div>
+
+    <!-- Details -->
+    <div class="flex-1 w-full">
+      <div class="flex justify-between items-start">
+        <h2 class="text-base font-semibold text-gray-900">
+          {{ product.title }}
+        </h2>
+        <span class="text-teal-600 font-bold"
+          >${{ product.price.toFixed(2) }}</span
+        >
+      </div>
+
+      <p class="text-sm text-gray-500 mt-1 line-clamp-2">
+        {{ product.description }}
+      </p>
+
+      <div class="mt-2 flex items-center justify-between text-sm">
+        <span class="text-xs text-gray-400"
+          >Category: {{ product.category }}</span
+        >
+        <span class="text-xs text-gray-400">Stock: {{ product.stock }}</span>
+      </div>
+
+      <div class="mt-4 flex gap-2">
+        <button
+          class="px-3 py-1 text-sm text-white bg-teal-600 rounded hover:bg-teal-700 transition"
+        >
+          Add to Cart
+        </button>
+        <button
+          class="px-3 py-1 text-sm text-gray-700 border border-gray-300 rounded hover:bg-gray-100"
+        >
+          View Details
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-container>
