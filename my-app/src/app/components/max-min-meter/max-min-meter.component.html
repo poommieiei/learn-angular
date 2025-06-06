@@ -1,10 +1,10 @@
 <div syle="display: flex; flex-direction: column; gap: 10px;">
   <div >
     {{minLabel}}
-    <app-action-bar (numberChange)="doMinChange($event)" [step]="5"></app-action-bar>
+    <app-action-bar [couter]="20" (couterChange)="doMinChange($event)" [step]="5"></app-action-bar>
   </div>
-  <div >
+  <!-- <div >
     {{maxLabel}}
-    <app-action-bar (numberChange)="doMaxChange($event)" [step]="10"></app-action-bar>
-  </div>
+    <app-action-bar (couterChange)="doMaxChange($event)" [step]="10"></app-action-bar>
+  </div> -->
 </div>

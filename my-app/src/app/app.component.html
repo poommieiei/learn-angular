@@ -1,4 +1,29 @@
-<div>
+<ul>
+  <li *ngFor="let product of productLists; let i = index">
+    {{product}}
+    <button (click)="removeProduct(i)">remove</button>
+  </li>
+</ul>
+
+<button (click)="pushProduct()">push</button>
+<button (click)="unshiftProduct()">push</button>
+
+
+<!-- <app-action-bar [inputDisplay]="true"></app-action-bar> -->
+
+
+
+<!-- <div *ngIf="avtivte; else elseTemplate">
+  <app-action-bar></app-action-bar>
+</div>
+
+<button (click)="avtivte = !avtivte">active conten</button>
+
+<ng-template #elseTemplate>
+  <div>template is active</div>
+</ng-template> -->
+
+<!-- <div>
   width :
   <button type="button" (click)="sqaureWidth = 50">50px</button>
   <button type="button" (click)="sqaureWidth = 100">100px</button>
@@ -6,7 +31,8 @@
 </div>
 
 
-<app-sqaure-flex [divHeight]="sqaureHeight" [divWeight]="sqaureWidth"></app-sqaure-flex>
+<app-sqaure-flex [divHeight]="sqaureHeight" [divWeight]="appCouter" ></app-sqaure-flex>
+<app-action-bar [(couter)]="appCouter" [step]="5"></app-action-bar>
 
 <app-max-min-meter
 [minLabel]="appMinLabel"
@@ -14,7 +40,8 @@
 (minChange)="doAppMinChange($event)"
 (maxChange)="doAppMaxChange($event)"
 >
-</app-max-min-meter>
+</app-max-min-meter> -->
+
 <!-- <div>
 
   <app-action-bar (numberChange)="testNumberChange($event)" [step]="5"></app-action-bar>
@@ -24,21 +51,12 @@
   <button type="button" (click)="testClick()">test</button>
 </div> -->
 
-
-
-
-
-
-
-
-
 <!-- hello {{ title }}
 <br/>
 this project for {{ test }} angular
 
 
 <button type="button" (click)="showMyName('poom')">click here</button> -->
-
 
 <!--
 <span>มา4 จ่าย3</span>

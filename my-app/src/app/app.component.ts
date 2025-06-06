@@ -3,22 +3,41 @@ import { RouterOutlet } from '@angular/router';
 import { ActionBarComponent } from './components/action-bar/action-bar.component';
 import { MaxMinMeterComponent } from './components/max-min-meter/max-min-meter.component';
 import { SqaureFlexComponent } from './components/sqaure-flex/sqaure-flex.component';
-
-
+import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-root',
-  imports: [MaxMinMeterComponent, SqaureFlexComponent],
+  imports: [ ActionBarComponent, MaxMinMeterComponent, SqaureFlexComponent, CommonModule],
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 
 export class AppComponent {
+
+  productLists: string[] = ['Apple', 'Banana', 'Orange', 'Grapes', 'Mango'];
+
   appMaxLabel = 'Maximum';
   appMinLabel = 'Minimum';
 
+  appCouter = 20;
+
   sqaureHeight = 100;
   sqaureWidth = 100;
+
+  avtivte = true;
+
+  pushProduct(){
+    this.productLists.push('New Product ' + (this.productLists.length + 1));
+  }
+
+  unshiftProduct(){
+    this.productLists.unshift('New Product ' + (this.productLists.length + 1));
+  }
+
+  removeProduct(index: number){
+    this.productLists.splice(index, 1);
+  }
 
   testClick(){
     console.log('Button clicked');
