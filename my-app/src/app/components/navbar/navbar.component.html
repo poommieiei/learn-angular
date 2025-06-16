@@ -3,7 +3,7 @@
 >
   <div class="container mx-auto flex flex-wrap items-center justify-between">
     <a href="/" class="text-xl font-semibold text-gray-900 dark:text-white">
-      MyApp
+      MyProducts
     </a>
     <button
       data-collapse-toggle="navbar-menu"
@@ -28,33 +28,23 @@
       </svg>
     </button>
 
-    <div
-
-      id="navbar-menu"
-    >
+    <div id="navbar-menu">
       <ul
         class="flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium"
       >
         <li>
-          <a
-            href="#"
-            class="block py-2 pl-3 pr-4 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
-            >Home</a
-          >
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white">
+            Home
+          </a>
         </li>
         <li>
-          <a
-            href="#"
-            class="block py-2 pl-3 pr-4 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
-            >About</a
-          >
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white">About
+          </a>
         </li>
         <li>
-          <a
-            href="#"
-            class="block py-2 pl-3 pr-4 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
-            >Contact</a
-          >
+          <a (click)="addProductPage()" class="block py-2 pl-3 pr-4 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white cursor-pointer">
+            เพิ่มสินค้า
+          </a>
         </li>
       </ul>
     </div>

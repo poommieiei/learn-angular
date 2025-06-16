@@ -1,0 +1,106 @@
+<div class="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md">
+  <h2 class="text-2xl font-bold mb-4 text-gray-800">เพิ่มสินค้าใหม่</h2>
+
+  <div class="space-y-4">
+    <!-- Title -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700">ชื่อสินค้า</label>
+      <input
+        type="text"
+        name="title"
+        [(ngModel)]="product.title"
+        name="title"
+        required
+        class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-teal-200"
+      />
+    </div>
+
+    <!-- Description -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700">รายละเอียด</label>
+      <textarea
+        name="description"
+        required
+        [(ngModel)]="product.description"
+        rows="3"
+        class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-teal-200"
+      ></textarea>
+    </div>
+
+    <!-- Price -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700">ราคา</label>
+      <input
+        type="number"
+        name="price"
+        [(ngModel)]="product.price"
+        required
+        class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md"
+      />
+    </div>
+
+    <!-- Category -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700">หมวดหมู่</label>
+      <input
+        type="text"
+        name="category"
+        [(ngModel)]="product.category"
+        class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md"
+      />
+    </div>
+
+    <!-- Stock -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700"
+        >จำนวนในสต็อก</label
+      >
+      <input
+        type="number"
+        name="stock"
+        [(ngModel)]="product.stock"
+        required
+        class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md"
+      />
+    </div>
+
+    <!-- Tags -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700"
+        >แท็ก (คั่นด้วย comma)</label
+      >
+      <input
+        type="text"
+        name="tags"
+        [(ngModel)]="product.tags"
+        placeholder="เช่น เสื้อ,ใหม่,โปรโมชั่น"
+        class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md"
+      />
+    </div>
+
+    <!-- Images -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700"
+        >ลิงก์รูปภาพ (คั่นด้วย comma)</label
+      >
+      <input
+        type="text"
+        name="images"
+        [(ngModel)]="product.images[0]"
+        placeholder="https://"
+        class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md"
+      />
+    </div>
+
+    <!-- Submit -->
+    <div>
+      <button
+        type="submit"
+        (click)="updateProduct()"
+        class="w-full bg-teal-600 text-white py-2 px-4 rounded-md hover:bg-teal-700 transition"
+      >
+        บันทึกสินค้า
+      </button>
+    </div>
+  </div>
+</div>

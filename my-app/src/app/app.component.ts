@@ -8,29 +8,29 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductComponent } from './components/product/product.component';
 import { Product } from './models/product.model';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [ProductComponent, CommonModule, NavbarComponent, HttpClientModule],
+  imports: [
+    CommonModule,
+    NavbarComponent,
+    HttpClientModule,
+    RouterModule,
+  ],
   standalone: true,
-  templateUrl: './app.component.html',
+  template: `
+    <main>
+      <app-navbar></app-navbar>
+      <div class="container mx-auto p-4">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  `,
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  products: Product[] = [];
 
-  constructor(private http: HttpClient) {
-    this.fetchProducts();
-  }
-
-  fetchProducts() {
-    this.http
-      .get<Product[]>('http://localhost:3000/api/products')
-      .subscribe({
-        next: (data) => (this.products = data),
-        error: (err) => console.error('Error fetching products', err),
-      });
-  }
 }
 // productLists: string[] = ['Apple', 'Banana', 'Orange', 'Grapes', 'Mango'];
 

@@ -8,14 +8,14 @@
       <img
         [src]="product.images[0]"
         [alt]="product.title"
-        class="w-full h-full object-cover object-center"
+        class="w-full h-full object-cover"
       />
     </div>
 
     <!-- Details -->
     <div class="flex-1 w-full">
-      <div class="flex justify-between items-start">
-        <h2 class="text-base font-semibold text-gray-900">
+      <div class="flex justify-between items-start w-2/3">
+        <h2 class="text-base font-semibold text-gray-900 text-ellipsis overflow-hidden whitespace-nowrap">
           {{ product.title }}
         </h2>
         <span class="text-teal-600 font-bold"
@@ -23,11 +23,11 @@
         >
       </div>
 
-      <p class="text-sm text-gray-500 mt-1 line-clamp-2">
+      <p class="text-sm text-gray-500 mt-1 line-clamp-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/3">
         {{ product.description }}
       </p>
 
-      <div class="mt-2 flex items-center justify-between text-sm">
+      <div class="mt-2 flex items-center justify-between text-sm w-2/3">
         <span class="text-xs text-gray-400"
           >Category: {{ product.category }}</span
         >
@@ -36,12 +36,8 @@
 
       <div class="mt-4 flex gap-2">
         <button
-          class="px-3 py-1 text-sm text-white bg-teal-600 rounded hover:bg-teal-700 transition"
-        >
-          Add to Cart
-        </button>
-        <button
           class="px-3 py-1 text-sm text-gray-700 border border-gray-300 rounded hover:bg-gray-100"
+          (click)="viewDetails()"
         >
           View Details
         </button>

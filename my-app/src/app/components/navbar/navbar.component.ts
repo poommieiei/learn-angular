@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
@@ -12,6 +13,12 @@ export class NavbarComponent {
   menuItems = [
     { name: 'Products', link: '/products' },
   ]
+
+  constructor(private router: Router) {}
+
+  addProductPage() {
+    this.router.navigate(['add-product']);
+  }
 
 
 }
