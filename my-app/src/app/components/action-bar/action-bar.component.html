@@ -1,9 +1,0 @@
-<button type="button" (click)="decrese()">-</button>
-<input type="number" [value]="couter" *ngIf="inputDisplay else elseTemplate" />
-
-<ng-template #elseTemplate>
-  <span>
-    {{ couter }}
-  </span>
-</ng-template>
-<button type="button" (click)="increse()">+</button>
